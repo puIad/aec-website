@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #110038
+  ;
+  --yellowcolor: #FFC200:
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #110038;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bookantique';
+  src: url('/fonts/bookantiqua.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Request';
+  src: url('/fonts/Request Personal Use Only.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+/* Transition for mobile nav */
+
+#mobile-nav.show {
+  transform: translateY(0); /* Move the menu into view */
+}
+
+
+#overlay.show {
+  display: block;
+}
+
+
+#mobile-nav a:hover {
+color: #FFC200;
+}
+
+/* For Overlay */
+#overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  z-index: 998; /* Just below the mobile nav */
+}
+/* Style for navbar links */
+.navLink {
+  text-decoration: none;
+  text-align: center;
+  color: white; 
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  transition: background-color 0.3s;
+  position: relative;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #FFC200;
+}
+/* Add animated underline to the links */
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Adjust for spacing between text and underline */
+  left: 0;
+  width: 0;
+  height: 3px; /* Thickness of the underline */
+  background-color: #FFC200; /* Underline color */
+  transition: width 0.3s ease; /* Animation duration */
+}
+/* On hover, expand the underline */
+.navLink:hover::after {
+  width: 100%; /* Full width of the link */
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan {
+  font-size: 1.5rem; /* Default font size */
+  font-family: 'Request';
+}
+
+@media (min-width: 768px) {
+  .slogan {
+    font-size: 4rem; /* Larger font size for medium screens and up */
+  }
+}
+
+.aec {
+  font-size: 2rem; /* Default font size */
+  font-family: 'Request';
+}
+
+@media (min-width: 768px) {
+  .aec {
+    font-size: 4rem; /* Larger font size for medium screens and up */
+  }
+}
+
+.regc {
+  font-size: 1rem; /* Default font size */
+  font-family: 'Request';
+}
+
+@media (min-width: 768px) {
+  .regc{
+    font-size: 3rem; /* Larger font size for medium screens and up */
+  }
+}
+
+.timer {
+  font-size: 1.5rem; /* Default font size */
+  font-family: 'Gilroy';
+}
+
+p{
+  font-family: 'Gilroy';
+
+}
+
+.reg{
+  font-family: 'Gilroy';
+
+}
+
+h3{
+  font-family: 'Gilroy';
+  font-size: xx-large;
+}
+
+@media (min-width: 768px) {
+  .timer {
+    font-size: 4rem; /* Larger font size for medium screens and up */
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .timer {
+    flex-direction: column;
+  }
+  
+  .time-section {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+header {
+  font-family: 'Gilroy', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 5px 0;
+  position: relative;
+}
+
+.logos-slide {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
+.logos-slide-spon {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  height: 200px;  
+  animation: slide 10s linear infinite;
+}
+
+.logos-slide-spon img {
+  margin: 0 10px;
+  object-fit: contain;
+}
+
+.logos-slide img {
+  margin: 0 30px;
+  object-fit: contain;
+}
+
+.inputStyle {
+  @apply border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[#FFC200];
+}
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.butto{
+  font-family: 'Gilroy', sans-serif;
+
+}
+/* globals.css or in a module.css file if using modular CSS */
+.swiper-slide {
+  transition: transform 0.3s, opacity 0.3s;
+}
