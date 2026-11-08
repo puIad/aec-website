@@ -1,0 +1,14 @@
+# aec-website
+
+> Website of the Algerian Engineering Competition (AEC). Home page with countdown, about, team and FAQ sections, a registration flow, accepted-teams and winners pages. Live at https://aec.vic-enp.com. Next.js, Supabase.
+
+## Docs
+
+- [README.md](https://github.com/puIad/aec-website/blob/main/README.md): what the site is, stack and how to run it
+
+## Source
+
+- [src/app/register](https://github.com/puIad/aec-website/tree/main/src/app/register): registration
+- [src/app/accepted](https://github.com/puIad/aec-website/tree/main/src/app/accepted): accepted teams
+- [src/app/winners](https://github.com/puIad/aec-website/tree/main/src/app/winners): winners
+- [src/app/components](https://github.com/puIad/aec-website/tree/main/src/app/components): page sections
